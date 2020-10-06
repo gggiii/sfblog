@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	<h1 class="mt-5">Test</h1>
+	{% for post in posts %}
+		<div class="card w-100 mb-3">
+			<div class="card-body">
+				<h5 class="card-title">{{post.title}}</h5>
+				<p class="card-text">{{post.content}}</p>
+				<a href="{{url('index.single', {id:post.id})}}" class="btn btn-primary">Read</a>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}

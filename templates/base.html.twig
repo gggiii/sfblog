@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include "parts/meta.html.twig" %}
+		{% include "parts/styles.html.twig" %}
+		{% block stylesheets %}{% endblock %}
+	</head>
+	<body>
+		{% include "parts/head.html.twig" %}
+		<div class="container pt-5"> {% block body %}{% endblock %}
+			</div>
+			{% include "parts/scripts.html.twig" %}
+			{% block javascripts %}{% endblock %}
+		</body>
+	</html>
